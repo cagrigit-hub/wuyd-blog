@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600&family=Righteous&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.r {
+    font-family: 'Righteous', cursive;
+}
+.l {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+
+@layer components {
+  h1 {
+
+    @apply text-4xl my-12 font-[500]
+  }
+ 
+  .raising {
+    @apply h-1 w-full z-[-10] absolute left-0 bottom-0 group-hover:animate-climb bg-teal-200 
+  }
+
+  h2 {
+    @apply text-3xl my-8 font-[500]
+  }
+
+  h3 {
+    @apply text-2xl my-6 font-[500]
+  }
+  figure {
+    @apply my-12
+  }
+
+  p {
+    @apply my-4 font-[300]
+  }
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+}
+/* *{
+  overflow-x: hidden;
+} */
+/* *{
+  box-sizing: border-box;
+  outline: 1px limegreen solid !important;  
+} */
+
+
+
+
+/***  Animations  ***/
+
+
+.animated-header {
+  animation: fade 3s;
+  transition: ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    background-color: rgb(204 251 241);
+  }
+  100% {
+    background-color: white;
+  }
+}
+
